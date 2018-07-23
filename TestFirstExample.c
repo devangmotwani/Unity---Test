@@ -10,22 +10,42 @@ void testIncrementForInput1(void){
         TEST_ASSERT (previous+1 == a);
 }
 
+void testIncrementForInput10(void){
+        int a=1;
+        int previous=a;
+        increment(&a);
+        TEST_ASSERT (previous+1 == a);
+}
+
+void testIncrementForInput100(void){
+        int a=1;
+        int previous=a;
+        increment(&a);
+        TEST_ASSERT (previous+1 == a);
+}
+
+void testIncrementForInput1000(void){
+        int a=1;
+        int previous=a;
+        increment(&a);
+        TEST_ASSERT (previous+1 == a);
+}
+
+void testIncrementForInput10000(void){
+        int a=1;
+        int previous=a;
+        increment(&a);
+        TEST_ASSERT (previous+1 == a);
+}
+
 int main(){
 	UNITY_BEGIN();
 
 	RUN_TEST(testIncrementForInput1);
-        /*
-	int a=20;
-        int b=30;
-        printf("Value before increment call: %d \n",a);
-        increment(&a);
-        printf("Value after increment() call: %d \n",a);
-        printf("Value of a before call: %d\t",a);
-        printf("Value of b before call: %d\t",b);
-        swap(&a,&b);
-        printf("Value of a: %d\t",a);
-        printf("Value of b: %d\t",b);
-        return 0;*/
+	RUN_TEST(testIncrementForInput10);
+	RUN_TEST(testIncrementForInput100);
+	RUN_TEST(testIncrementForInput1000);
+	RUN_TEST(testIncrementForInput10000);
 	return UNITY_END();
 }
 
