@@ -3,4 +3,5 @@
 
 void increment(int *a);
 
+void incorrect_increment(int a);
 #endif
